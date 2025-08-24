@@ -2,91 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taha Shah</title>
+  <title>Mohammad Taha Shah</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Times New Roman", serif;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
-      background: #fafafa;
-      color: #333;
-      max-width: 800px;
-      margin: auto;
     }
-    header {
-      text-align: center;
-      padding: 2rem 1rem;
+    #container {
+      display: flex;
     }
-    header img {
-      width: 160px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
+    /* Sidebar */
+    #sidebar {
+      width: 220px;
+      background: #f5f5f5;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+      height: 100vh;
+      position: fixed;
+    }
+    #sidebar h2 {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+    #sidebar a {
+      display: block;
+      margin: 5px 0;
+      text-decoration: none;
+      color: #004080;
+    }
+    #sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main content */
+    #content {
+      margin-left: 240px;
+      padding: 20px;
+      max-width: 900px;
     }
     h1 {
-      margin-bottom: 0.2rem;
+      margin-top: 0;
     }
-    nav {
-      margin: 1rem 0;
-      text-align: center;
+    img {
+      float: left;
+      margin-right: 20px;
+      width: 180px;
+      border: 1px solid #ccc;
+      padding: 3px;
     }
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #0073e6;
+    .contact {
+      margin-top: 10px;
     }
-    section {
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 4px rgba(0,0,0,0.1);
+    .section {
+      margin-top: 40px;
     }
-    h2 {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.3rem;
+    .section h2 {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+      color: #003366;
+    }
+    ul {
+      margin-top: 5px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="profile.png" alt="Taha Shah">
-    <h1>Taha Shah</h1>
-    <p>PhD Research Scholar | IIIT-Delhi</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<div id="container">
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a Ph.D. scholar at IIIT-Delhi, working on modeling and statistical analysis of automotive radar networks using Line Cox Processes. My research interests include stochastic geometry, signal processing, wireless communication, and online learning (multi-armed bandits).</p>
-  </section>
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <h2>Mohammad Taha Shah</h2>
+    <a href="#home">Home</a>
+    <a href="#bio">Biography</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+  </div>
 
-  <section id="research">
-    <h2>Research</h2>
-    <p>My work focuses on stochastic geometry models for automotive radar, statistical inference, and performance analysis of communication systems. I am also exploring reinforcement learning methods for wireless communication and resource allocation.</p>
-  </section>
+  <!-- Main content -->
+  <div id="content">
+    <h1>Mohammad Taha Shah</h1>
+    <img src="profile.png" alt="Profile photo">
+    <p>
+      PhD Student, <br>
+      Department of Electrical Engineering, <br>
+      Indian Institute of Technology (IIT) Delhi
+    </p>
+    <p class="contact">
+      Email: <a href="mailto:tahashah@dbst.iitd.ac.in">tahashah@dbst.iitd.ac.in</a><br>
+      Phone: +91 7006759826
+    </p>
 
-  <section id="publications">
-    <h2>Publications</h2>
-    <ul>
-      <li><b>Fine Grained Analysis and Optimization of Large Scale Automotive Radar Networks</b> – under review.</li>
-      <li>Thompson Sampling with Sharpe Ratio Bandits – Draft Paper.</li>
-    </ul>
-  </section>
+    <div class="section" id="bio">
+      <h2>Biography</h2>
+      <p>
+        I am a PhD student at IIT Delhi working on Wireless Communication, Stochastic Geometry,
+        and Online Learning. My research focuses on large-scale radar networks, resource allocation,
+        and learning algorithms.
+      </p>
+    </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:tahashah@iiitd.ac.in">tahashah@iiitd.ac.in</a></p>
-    <p>GitHub: <a href="https://github.com/shahmt" target="_blank">github.com/shahmt</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/tahashah" target="_blank">linkedin.com/in/tahashah</a></p>
-  </section>
+    <div class="section" id="research">
+      <h2>Research Areas</h2>
+      <ul>
+        <li>Stochastic Geometry for Wireless Networks</li>
+        <li>Multi-Armed Bandits & Online Learning</li>
+        <li>Automotive Radar Network Modeling</li>
+      </ul>
+    </div>
+
+    <div class="section" id="publications">
+      <h2>Publications</h2>
+      <ul>
+        <li>[2025] Fine-Grained Analysis and Optimization of Large-Scale Automotive Radar Networks.</li>
+        <li>[2024] Thompson Sampling with Sharpe Ratio Bandits.</li>
+        <li>[2023] Statistical Modeling of Radar Interference using Line Cox Processes.</li>
+      </ul>
+    </div>
+
+    <div class="section" id="contact">
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:tahashah@dbst.iitd.ac.in">tahashah@dbst.iitd.ac.in</a><br>
+        Phone: +91 7006759826
+      </p>
+    </div>
+  </div>
+
+</div>
 
 </body>
 </html>
