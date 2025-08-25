@@ -9,13 +9,70 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      padding: 40px;
       background-color: #fff;
       color: #333;
-      line-height: 1.6; /* Improved readability */
+      line-height: 1.6;
+      display: flex;
     }
 
-    h1 {
+    /* Minimal Sidebar */
+    .sidebar {
+      width: 200px;
+      background: #f8f9fa;
+      border-right: px solid #eee;
+      padding: 20px 0px;
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+
+    .sidebar h2 {
+      font-size: 16px;
+      color: #333;
+      margin: 0 0 20px 0;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+
+    .sidebar ul li {
+      margin: 12px 0;
+    }
+
+    .sidebar ul li a {
+      color: #4A72C9;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 20px;
+      display: block;
+      padding: 6px 10px;
+      border-radius: px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    
+    .sidebar ul li a.active {
+      color: #FFFFF;
+      font-weight: 600;
+    }
+
+    .sidebar ul li a:hover {
+      color: #4A72C9;
+      background: #eef4ff;
+    }
+
+    /* Main Content */
+    .content {
+      margin-left: 230px; /* Should be > sidebar width */
+      padding: 40px;
+      flex: 1;
+    }
+
+    .content h1 {
       color: #4A72C9;
       border-bottom: 1px solid #eee;
       padding-bottom: 8px;
@@ -23,7 +80,7 @@
       font-size: 24px;
     }
 
-    h2 {
+    .content h2 {
       color: #4A72C9;
       margin-top: 20px;
       margin-bottom: 10px;
@@ -35,7 +92,6 @@
       margin: 8px 0;
     }
 
-    /* Add consistent spacing between job entries */
     .experience {
       margin-bottom: 30px;
     }
@@ -53,29 +109,42 @@
 </head>
 <body>
 
-  <h1>Relevant Work</h1>
-
-  <!-- EarlyDoc Fellowship at IIT Delhi -->
-  <div class="experience">
-    <h2>EarlyDoc Research Fellow</h2>
-    <p><strong>Indian Institute of Technology, Delhi (IIT Delhi)</strong> | Aug, 2025 – Present</p>
-    <p>Conducting research in the application of bandit algorithms for wireless networks.</p>
-  </div>
-  <hr class="divider">
-  <!-- Internship at VVDN -->
-  <div class="experience">
-    <h2>Intern - 5G Wireless Engineering</h2>
-    <p><strong>VVDN Technologies</strong> | Aug, 2020 - May, 2021</p>
-    <p>Major Projects were on research and development on 5G PHY, such as:</p>
+  <!-- Sidebar -->
+  <div class="sidebar">
     <ul>
-      <li>5G NR PRACH Configuration and Detection</li>
-      <li>5G NR CSI Generation, Configuration, and Measurement</li>
-      <li>MIMO-OFDM NR Channel Estimation and Timing Offset Correction</li>
-      <li>5G NR Phase Compensation</li>
-      <li>5G NR Frequency Offset Correction</li>
-      <li>FlexRAN Algorithms</li>
-      <li>LTE PRACH — PUSCH LoPHY Processing</li>
+      <li><a href="index.html">About Me</a></li>
+      <li><a href="work.html" class="active">Work Experience</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="blog.html">Blog</a></li>
     </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h1>Relevant Work</h1>
+
+    <!-- EarlyDoc Fellowship at IIT Delhi -->
+    <div class="experience">
+      <h2>EarlyDoc Research Fellow</h2>
+      <p><strong>Indian Institute of Technology, Delhi (IIT Delhi)</strong> | Aug, 2025 – Present</p>
+      <p>Conducting research in application of bandit algorithms for wireless networks.</p>
+    </div>
+    <hr class="divider">
+    <!-- Internship at VVDN -->
+    <div class="experience">
+      <h2>Intern - 5G Wireless Engineering</h2>
+      <p><strong>VVDN Technologies</strong> | Aug, 2020 – May, 2021</p>
+      <p>Major Projects were on research and development on 5G PHY, such as:</p>
+      <ul>
+        <li>5G NR PRACH Configuration and Detection</li>
+        <li>5G NR CSI Generation, Configuration, and Measurement</li>
+        <li>MIMO-OFDM NR Channel Estimation and Timing Offset Correction</li>
+        <li>5G NR Phase Compensation</li>
+        <li>5G NR Frequency Offset Correction</li>
+        <li>FlexRAN Algorithms</li>
+        <li>LTE PRACH — PUSCH LoPHY Processing</li>
+      </ul>
+    </div>
   </div>
 
 </body>
