@@ -30,6 +30,32 @@
       overflow-y: auto;
       font-family: 'Roboto', sans-serif;
     }
+    
+    /* Sidebar Navigation Links */
+    .sidebar-nav {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      width: 100%;
+    }
+    
+    .sidebar-nav li {
+      margin: 8px 0;
+    }
+    
+    .nav-link {
+      color: #e62048 !important;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 500;
+      padding: 6px 0;
+      display: block;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      color: #e62048 !important;
+    }
 
     .sidebar img {
       width: 100px;
@@ -71,6 +97,14 @@
     .sidebar ul li i {
       margin-right: 6px;
       color: #555;
+    }
+    
+    .sidebar-divider {
+      border: none;
+      height: 5px; /* Thickness */
+      background: #ddd; /* Light gray */
+      margin: 15px 0; /* Vertical spacing */
+      width: 100%;
     }
 
     /* Main content area */
@@ -183,24 +217,31 @@
     }
   </style>
 </head>
-<body>
 
+<body>
   <!-- Sidebar -->
-  <div class="sidebar">
-    <img src="profile.png" alt="Mohammad Taha Shah">
-    <h2>Mohammad Taha Shah</h2>
-    <p>EarlyDoc fellow at IIT Delhi</p>
-    <ul>
-      <li><i class="fa-solid fa-location-dot"></i> New Delhi, India</li>
-      <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/mohammad-taha-s-34b210148/" target="_blank">LinkedIn</a></li>
-      <li><i class="fa-brands fa-google-scholar"></i> <a href="https://scholar.google.com/citations?user=E3Cdy7QAAAAJ" target="_blank">Google Scholar</a></li>
-      <li><i class="fa-solid fa-file"></i> <a href="cv.pdf" target="_blank">CV</a></li>
-    </ul>
-  </div>
+    <div class="sidebar">
+      <img src="profile.png" alt="Mohammad Taha Shah">
+      <h2>Mohammad Taha Shah</h2>
+      <p>EarlyDoc fellow at IIT Delhi</p>
+    
+      <!-- Navigation Links -->
+      <ul class="sidebar-nav">
+        <li><a href="work.html" class="nav-link">Work Experience</a></li>
+        <li><a href="teaching.html" class="nav-link">Teaching</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+      </ul>
+      <hr class="sidebar-divider">
+      <!-- Contact & Social Icons -->
+      <ul class="sidebar-contact">
+        <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/mohammad-taha-s-34b210148/" target="_blank">LinkedIn</a></li>
+        <li><i class="fa-brands fa-google-scholar"></i> <a href="https://scholar.google.com/citations?user=E3Cdy7QAAAAJ" target="_blank">Google Scholar</a></li>
+        <li><i class="fa-solid fa-file-lines"></i> <a href="cv.pdf" target="_blank">CV</a></li>
+      </ul>
+    </div>
 
   <!-- Main Content -->
   <div class="content">
-
     <section id="about">
       <h2>About Me</h2>
       <p>I recently completed my PhD from the Indian Institute of Technology, Delhi, under the supervision of Prof. Gourab Ghatak. My research focus during my PhD was on developing tools from Stochastic Geometry and applying them in modelling, analysis, and optimization of wireless and automotive radar networks. Right at the end of the 3rd year in my PhD, I got interested in problems related to multi-armed bandits and learning theory. This led me to work on Sharpe ratio optimization using bandit algorithms.</p>
@@ -281,6 +322,6 @@
     </section>
 
   </div>
-
 </body>
+
 </html>
