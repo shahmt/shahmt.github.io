@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mohammad Taha Shah - Academic Page</title>
+
+  <!-- Google Fonts: Roboto -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
   <style>
     body {
       margin: 0;
@@ -15,19 +20,19 @@
 
     /* Sidebar styling */
     .sidebar {
-      width: 180px; /* adjusted so content fits properly */
+      width: 180px;
       background: #fff;
       border-right: 1px solid #ddd;
-      padding: 15px 10px; /* tighter padding */
+      padding: 15px 10px;
       text-align: center;
       position: fixed;
       height: 100vh;
-      overflow-y: auto; /* allows scroll if content overflows */
+      overflow-y: auto;
       font-family: 'Roboto', sans-serif;
     }
 
     .sidebar img {
-      width: 100px;   /* reduced to fit inside sidebar */
+      width: 100px;
       height: 100px;
       border-radius: 50%;
       margin-bottom: 10px;
@@ -70,17 +75,19 @@
 
     /* Main content area */
     .content {
-      margin-left: 200px; /* should match sidebar width + padding */
+      margin-left: 200px;
       font-family: 'Roboto', sans-serif;
       padding: 30px;
       flex: 1;
     }
 
+    /* Section styling */
     section {
       margin-bottom: 60px;
     }
 
-    section h1 {
+    /* Main section headings (only one h1 conceptually, so use h2) */
+    section h2 {
       font-size: 24px;
       margin-bottom: 12px;
       border-bottom: 2px solid #eee;
@@ -88,18 +95,91 @@
       color: #4A72C9;
     }
 
+    /* Subsection headings (e.g., Journal/Conference) */
+    section h3 {
+      font-size: 18px;
+      color: #333;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 4px;
+      font-weight: 500;
+    }
+
     section p {
       font-size: 15px;
       line-height: 1.6;
     }
 
-    ul.publications {
+    /* Research Interests List */
+    .research-list {
       list-style: disc;
-      margin-left: 20px;
+      padding-left: 20px;
+      margin-top: 10px;
     }
 
+    .research-list li {
+      margin-bottom: 12px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .research-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Publications list */
+    ul.publications {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul.publications li {
+      margin-bottom: 1.2em; /* Improved spacing between entries */
+    }
+
+    /* Publication title */
+    .pub-title {
+      color: #4A72C9;
+      font-weight: 600;
+    }
+
+    /* Authors line */
+    .pub-authors {
+      display: block;
+      margin-top: 0.4em;
+      color: #333;
+    }
+
+    /* Journal/conference line */
+    .pub-journal {
+      display: block;
+      font-style: italic;
+      margin-top: 0.3em;
+      color: #555;
+      font-size: 0.95em;
+    }
+
+    /* Links */
     a {
-      color: #0066cc;
+      color: #4A72C9;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Blinking effect for PostDoc search */
+    .blink {
+      color: #4A72C9;
+      font-weight: 500;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.3; }
+      100% { opacity: 1; }
     }
   </style>
 </head>
@@ -107,17 +187,14 @@
 
   <!-- Sidebar -->
   <div class="sidebar">
-    <img src="profile.png" alt="My Photo"> <!-- Replace with your photo filename -->
+    <img src="profile.png" alt="Mohammad Taha Shah">
     <h2>Mohammad Taha Shah</h2>
-    <p>PhD Research Scholar at IIT Delhi</p>
-
+    <p>EarlyDoc fellow at IIT Delhi</p>
     <ul>
       <li><i class="fa-solid fa-location-dot"></i> New Delhi, India</li>
-      <li><i class="fa-solid fa-university"></i> <a href="https://www.iitd.ac.in/" target="_blank">Institutional Page</a></li>
-      <li><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
-      <li><i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a></li>
-      <li><i class="fa-brands fa-github"></i> <a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
-      <li><i class="fa-brands fa-google-scholar"></i> <a href="https://scholar.google.com/citations?user=yourid" target="_blank">Google Scholar</a></li>
+      <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/mohammad-taha-s-34b210148/" target="_blank">LinkedIn</a></li>
+      <li><i class="fa-brands fa-google-scholar"></i> <a href="https://scholar.google.com/citations?user=E3Cdy7QAAAAJ" target="_blank">Google Scholar</a></li>
+      <li><i class="fa-solid fa-file"></i> <a href="cv.pdf" target="_blank">CV</a></li>
     </ul>
   </div>
 
@@ -125,25 +202,84 @@
   <div class="content">
 
     <section id="about">
-      <h1>About Me</h1>
-      <p>I recently completed my PhD from the Indian Institute of Technology, Delhi, under the supervision of Prof. Gourab Ghatak. My research focus during my PhD was on developing tools from Stochastic Geometry and applying them in modelling, analysis, and optimization of wireless and automotive radar networks. Right at the end of 3rd year in PhD I got intrested in problems around on multi-armed bandits and learning theory. This pushed me to work on one particular problem of Sharpe ratio optimization through the bandit algorithm. This is why I am looking for a PostDoc position in MABs and online learning.</p>
+      <h2>About Me</h2>
+      <p>I recently completed my PhD from the Indian Institute of Technology, Delhi, under the supervision of Prof. Gourab Ghatak. My research focus during my PhD was on developing tools from Stochastic Geometry and applying them in modelling, analysis, and optimization of wireless and automotive radar networks. Right at the end of the 3rd year in my PhD, I got interested in problems related to multi-armed bandits and learning theory. This led me to work on Sharpe ratio optimization using bandit algorithms.</p>
+      <p>This is why I am <span class="blink">looking for PostDoc positions in MABs and online learning.</span></p>
     </section>
 
+    <section id="research_interests">
+      <h2>Research Interests</h2>
+      <p>My current research interests are in two directions:</p>
+      <ul class="research-list">
+        <li>Stochastic modelling of wireless networks</li>
+        <li>Multi-armed bandits and online learning</li>
+      </ul>
+    </section>
 
     <section id="publications">
-      <h1>Publications</h1>
+      <h2>Publications</h2>
+
+      <h3>Preprints and Submissions</h3>
       <ul class="publications">
-        <li><strong>Paper 1</strong>: Fine Grained Analysis and Optimization of Large Scale Automotive Radar Networks (2025)</li>
-        <li><strong>Paper 2</strong>: Thompson Sampling with Sharpe Ratio Bandits (2024)</li>
-        <li><strong>Paper 3</strong>: Resource Allocation in Wireless Networks using Multi-Armed Bandits (2023)</li>
+        <li>
+          <strong>1.</strong>
+          <span class="pub-title">Order Optimal Regret Bounds for Sharpe Ratio Optimization in the Bandit Setting</span>
+          <span class="pub-authors"><strong>Mohammad Taha Shah</strong>, Sabrina Khurshid, and Gourab Ghatak</span>
+          <span class="pub-journal">Submitted</span>
+        </li>
+        <li>
+          <strong>2.</strong>
+          <span class="pub-title">Modeling and Statistical Characterization of Large-Scale Automotive Radar Networks</span>
+          <span class="pub-authors"><strong>Mohammad Taha Shah</strong>, Gourab Ghatak, Ankit Kumar, and Shobha Sundar Ram</span>
+          <span class="pub-journal">Submitted to IEEE Transactions on Signal Processing, July 2025</span>
+        </li>
+      </ul>
+
+      <h3>Journal Papers</h3>
+      <ul class="publications">
+        <li>
+          <strong>1.</strong>
+          <span class="pub-title">Fine Grained Analysis and Optimization of Large Scale Automotive Radar Networks</span>
+          <span class="pub-authors"><strong>Mohammad Taha Shah</strong>, Gourab Ghatak, and Shobha Sundar Ram</span>
+          <span class="pub-journal">IEEE Transactions on Signal Processing, 2025+</span>
+        </li>
+        <li>
+          <strong>2.</strong>
+          <span class="pub-title">Binomial Line Cox Processes: Statistical Characterization and Applications in Wireless Network Analysis</span>
+          <span class="pub-authors"><strong>Mohammad Taha Shah</strong>, Gourab Ghatak, Souradip Sanyal, and Martin Haenggi</span>
+          <span class="pub-journal">IEEE Transactions on Wireless Communications, Vol. 23, No. 10, October 2024</span>
+        </li>
+      </ul>
+
+      <h3>Conference Papers</h3>
+      <ul class="publications">
+        <li>
+          <strong>1.</strong>
+          <span class="pub-title">Optimization of Beamwidth in Automotive Radars Based on Statistics of Street Geometry</span>
+          <span class="pub-authors"><strong>Mohammad Taha Shah</strong>, Gourab Ghatak, and Shobha Sundar Ram</span>
+          <span class="pub-journal">ICASSP 2025, Hyderabad, India</span>
+        </li>
+        <li>
+          <strong>2.</strong>
+          <span class="pub-title">Impact of Urban Street Geometry on the Detection Probability of Automotive Radars</span>
+          <span class="pub-authors"><strong>Mohammad Taha Shah</strong>, Ankit Kumar, Gourab Ghatak, and Shobha Sundar Ram</span>
+          <span class="pub-journal">IEEE RadarConference 2024, Denver, Colorado</span>
+        </li>
+        <li>
+          <strong>3.</strong>
+          <span class="pub-title">Analyzing Wireless Networks using Binomial Line Cox Processes</span>
+          <span class="pub-authors"><strong>Mohammad Taha Shah</strong>, Gourab Ghatak, Souradip Sanyal, and Martin Haenggi</span>
+          <span class="pub-journal">IEEE WiOpt 2023, NTU, Singapore</span>
+        </li>
       </ul>
     </section>
 
     <section id="contact">
-      <h1>Contact</h1>
+      <h2>Contact</h2>
       <p>Email: <a href="mailto:tahashah@iitd.ac.in">tahashah@iitd.ac.in</a></p>
-      <p>Office: Department of Electrical Engineering, IIT Delhi</p>
+      <p>Office: Lab 3A7, Block III, IIT Delhi</p>
     </section>
+
   </div>
 
 </body>
