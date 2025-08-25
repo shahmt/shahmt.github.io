@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Education - Mohammad Taha Shah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+    }
+
+    /* Minimal Sidebar */
+    .sidebar {
+      width: 200px;
+      background: #f8f9fa;
+      border-right: px solid #eee;
+      padding: 20px 0px;
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+
+    .sidebar h2 {
+      font-size: 16px;
+      color: #333;
+      margin: 0 0 20px 0;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+
+    .sidebar ul li {
+      margin: 12px 0;
+    }
+
+    .sidebar ul li a {
+      color: #4A72C9;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 20px;
+      display: block;
+      padding: 6px 10px;
+      border-radius: px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    
+    .sidebar ul li a.active {
+      color: #FFFFF;
+      font-weight: 600;
+    }
+
+    .sidebar ul li a:hover {
+      color: #4A72C9;
+      background: #eef4ff;
+    }
+
+    /* Main Content */
+    .content {
+      margin-left: 230px; /* Must be > sidebar width */
+      padding: 40px;
+      flex: 1;
+    }
+
+    .content h1 {
+      color: #4A72C9;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+      margin-bottom: 24px;
+      font-size: 24px;
+    }
+
+    .education-item {
+      margin-bottom: 24px;
+    }
+
+    .date {
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 4px;
+    }
+
+    .institution {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    .degree {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    .supervisor {
+      color: #555;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    
+    /* Divider between education items */
+    .divider {
+      border: none;
+      height: 1px;
+      background: #ddd;
+      margin: 20px 0;
+    }
+    
+    /* Education Item Styling */
+    .education-item {
+      padding: 1px 0;
+    }
+    
+    .education-item .date {
+      font-weight: 500;
+      color: #4A72C9;
+      font-size: 14px;
+      margin-bottom: 1px;
+    }
+    
+    .education-item .degree {
+      font-weight: 600;
+      color: #333;
+      font-size: 17px;
+      margin-bottom: 1px;
+    }
+    
+    .education-item .institution {
+      font-weight: 500;
+      color: #222;
+      font-size: 15px;
+      margin-bottom: 1px;
+    }
+    
+    .education-item .supervisor {
+      font-size: 14px;
+      color: #555;
+      margin-top: 1px;
+    }
+    
+    /* Supervisor Link Styling */
+    .supervisor-link {
+      color: #4A72C9;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    
+    .supervisor-link:hover {
+      color: #e62048;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <ul>
+      <li><a href="index.html">About Me</a></li>
+      <li><a href="work.html">Work Experience</a></li>
+      <li><a href="education.html" class="active">Education</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+<!-- Main Content -->
+<div class="content">
+  <h1>Education</h1>
+
+  <!-- Ph.D. -->
+  <div class="education-item">
+    <div class="date">Aug 2021 – July 2025</div>
+    <div class="degree">Doctor of Philosophy (Ph.D.)</div>
+    <div class="institution">Indian Institute of Technology Delhi (IITD)</div>
+    <div class="supervisor">
+      Thesis Supervisor: 
+      <a href="https://www.ee.iitd.ac.in/~gourab/" target="_blank" class="supervisor-link">Prof. Gourab Ghatak</a>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- M.Tech -->
+  <div class="education-item">
+    <div class="date">July 2019 – July 2021</div>
+    <div class="degree">Master of Technology (ECE)</div>
+    <div class="institution">Indraprastha Institute of Information Technology Delhi (IIITD)</div>
+    <div class="supervisor">
+      Thesis Supervisor: 
+      <a href="https://sumitdarak.iiitd.edu.in/" target="_blank" class="supervisor-link">Prof. Sumit Darak</a>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- B.Tech -->
+  <div class="education-item">
+    <div class="date">Sept. 2012 – March 2017</div>
+    <div class="degree">Bachelor of Technology (ECE)</div>
+    <div class="institution">University of Kashmir</div>
+    <div class="supervisor">
+      Project Advisor: 
+      <a href="https://www.banday.in/" target="_blank" class="supervisor-link">Dr. Tariq M. Banday</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
