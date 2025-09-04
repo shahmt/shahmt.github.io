@@ -7,6 +7,8 @@
 
   <!-- Google Fonts: Roboto -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
 
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
@@ -216,6 +218,27 @@
       50% { opacity: 0.3; }
       100% { opacity: 1; }
     }
+    .quote-box {
+      margin: 20px 0 40px;
+      padding: 15px 20px;
+      background: #f0f4ff;
+      border-left: 4px solid #4A72C9;
+      font-style: italic;
+      font-size: 16px;
+      color: #333;
+      font-family: 'Lora', serif;   /* Use Lora font */
+    }
+    
+    .quote-box .quote-author {
+      display: block;
+      margin-top: 8px;
+      text-align: right;
+      font-weight: bold;
+      font-style: normal;
+      color: #4A72C9;
+      font-family: 'Lora', serif;   /* Apply Lora here too */
+    }
+
   </style>
 </head>
 
@@ -242,7 +265,14 @@
     </div>
 
   <!-- Main Content -->
+  
   <div class="content">
+    <div class="quote-box">
+      <blockquote>
+        "Talent is something you make bloom, Instinct is something you polish."  
+        <span class="quote-author">~ Haikyuu!!</span>
+      </blockquote>
+    </div>
     <section id="about">
       <h2>About Me</h2>
       <p>I recently completed my PhD from the Indian Institute of Technology, Delhi, under the supervision of Prof. Gourab Ghatak. My research focus during my PhD was on developing tools from Stochastic Geometry and applying them in modelling, analysis, and optimization of wireless and automotive radar networks. Right at the end of the 3rd year in my PhD, I got interested in problems related to multi-armed bandits and learning theory. This led me to work on Sharpe ratio optimization using bandit algorithms.</p>
