@@ -14,10 +14,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 
   <style>
-    body {
+    /* Make html/body full height so sidebar can stretch */
+    html, body {
+      height: 100%;
       margin: 0;
+    }
+
+    body {
       font-family: Arial, sans-serif;
       display: flex;
+      min-height: 100vh;
     }
 
     /* Sidebar styling */
@@ -25,10 +31,14 @@
       width: 180px;
       background: #f8f9fa;
       border-right: 1px solid #ddd;
-      border-bottom: 5px solid #999;  /* darker bottom line */
       padding: 15px 0px;
       text-align: center;
       position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;          /* stretch to full viewport height */
+      overflow-y: auto;       /* scroll inside sidebar if content overflows */
+      box-sizing: border-box;
       font-family: 'Roboto', sans-serif;
     }
 
@@ -247,7 +257,7 @@
     <div class="sidebar">
       <img src="profile.png" alt="Mohammad Taha Shah">
       <h2>Mohammad Taha Shah</h2>
-      <p>EarlyDoc fellow at IIT Delhi</p>
+      <p>Postdoctoral researcher at KAUST</p>
     
       <!-- Navigation Links -->
       <ul class="sidebar-nav">
@@ -287,14 +297,14 @@
       </ul>
     </section>
 
-    <section id="publications">
+   <section id="publications">
       <h2>Publications</h2>
 
       <h3>Preprints and Submissions</h3>
       <ul class="publications">
         <li>
           <strong>1.</strong>
-          <span class="pub-title">Order Optimal Regret Bounds for Sharpe Ratio Optimization in the Bandit Setting</span>
+          <span class="pub-title"><a href="https://arxiv.org/pdf/2508.13749" target="_blank">Order Optimal Regret Bounds for Sharpe Ratio Optimization under Thompson Sampling</a></span>
           <span class="pub-authors"><strong>Mohammad Taha Shah</strong>, Sabrina Khurshid, and Gourab Ghatak</span>
           <span class="pub-journal">Submitted</span>
         </li>
@@ -304,19 +314,19 @@
       <ul class="publications">
         <li>
           <strong>1.</strong>
-          <span class="pub-title">Modeling and Statistical Characterization of Large-Scale Automotive Radar Networks</span>
+          <span class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/11366251" target="_blank">Modeling and Statistical Characterization of Large-Scale Automotive Radar Networks</a></span>
           <span class="pub-authors"><strong>Mohammad Taha Shah</strong>, Gourab Ghatak, Ankit Kumar, and Shobha Sundar Ram</span>
           <span class="pub-journal">IEEE Transactions on Signal Processing, Vol. 74, Jan 2026</span>
         </li>
         <li>
           <strong>1.</strong>
-          <span class="pub-title">Fine Grained Analysis and Optimization of Large Scale Automotive Radar Networks</span>
+          <span class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/11075590" target="_blank">Fine Grained Analysis and Optimization of Large Scale Automotive Radar Networks</a></span>
           <span class="pub-authors"><strong>Mohammad Taha Shah</strong>, Gourab Ghatak, and Shobha Sundar Ram</span>
           <span class="pub-journal">IEEE Transactions on Signal Processing, Vol. 73, July 2025</span>
         </li>
         <li>
           <strong>2.</strong>
-          <span class="pub-title">Binomial Line Cox Processes: Statistical Characterization and Applications in Wireless Network Analysis</span>
+          <span class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/10551714" target="_blank">Binomial Line Cox Processes: Statistical Characterization and Applications in Wireless Network Analysis</a></span>
           <span class="pub-authors"><strong>Mohammad Taha Shah</strong>, Gourab Ghatak, Souradip Sanyal, and Martin Haenggi</span>
           <span class="pub-journal">IEEE Transactions on Wireless Communications, Vol. 23, No. 10, October 2024</span>
         </li>
@@ -326,19 +336,19 @@
       <ul class="publications">
         <li>
           <strong>1.</strong>
-          <span class="pub-title">Optimization of Beamwidth in Automotive Radars Based on Statistics of Street Geometry</span>
+          <span class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/10889341" target="_blank">Optimization of Beamwidth in Automotive Radars Based on Statistics of Street Geometry</a></span>
           <span class="pub-authors"><strong>Mohammad Taha Shah</strong>, Gourab Ghatak, and Shobha Sundar Ram</span>
           <span class="pub-journal">ICASSP 2025, Hyderabad, India</span>
         </li>
         <li>
           <strong>2.</strong>
-          <span class="pub-title">Impact of Urban Street Geometry on the Detection Probability of Automotive Radars</span>
+          <span class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/10548906" target="_blank">Impact of Urban Street Geometry on the Detection Probability of Automotive Radars</a></span>
           <span class="pub-authors"><strong>Mohammad Taha Shah</strong>, Ankit Kumar, Gourab Ghatak, and Shobha Sundar Ram</span>
           <span class="pub-journal">IEEE Radar Conference 2024, Denver, Colorado</span>
         </li>
         <li>
           <strong>3.</strong>
-          <span class="pub-title">Analyzing Wireless Networks using Binomial Line Cox Processes</span>
+          <span class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/10349869" target="_blank">Analyzing Wireless Networks using Binomial Line Cox Processes</a></span>
           <span class="pub-authors"><strong>Mohammad Taha Shah</strong>, Gourab Ghatak, Souradip Sanyal, and Martin Haenggi</span>
           <span class="pub-journal">IEEE WiOpt 2023, NTU, Singapore</span>
         </li>
@@ -347,8 +357,9 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:tahashah@iitd.ac.in">tahashah@iitd.ac.in</a></p>
-      <p>Office: Lab 3A7, Block III, IIT Delhi</p>
+      <p>Email: <a href="mailto:mohammadtaha.shah@kaust.edu.sa">mohammadtaha.shah@kaust.edu.sa</a></p>
+      <p> </p> 
+      <!--<p>Office: Lab 3A7, Block III, IIT Delhi</p> -->
     </section>
 
   </div>
